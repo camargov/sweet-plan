@@ -1,7 +1,9 @@
+import HomeDisplay from "@/components/home/home";
+
 export default function Home() {
 	return (
 		<div>
-			<button>Log in</button>
+			<HomeDisplay />
 		</div>
 	);
 }
