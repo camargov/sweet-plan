@@ -18,7 +18,7 @@ const Page = () => {
 	const handleSignUpWithGoogleClick = async () => {
 		const result = await logInUsingGoogle();
 		console.log(result);
-		router.push("/dashboard");
+		router.push("/");
 	};
 
 	const handleForm = async (event: FormEvent) => {
@@ -31,7 +31,7 @@ const Page = () => {
 		}
 
 		console.log(result);
-		return router.push("/dashboard");
+		return router.push("/");
 	};
 
 	const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {

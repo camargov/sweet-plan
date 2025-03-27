@@ -3,14 +3,10 @@ import { useRouter } from "next/navigation";
 import Button from "../../button/button";
 import Logo from "../../logo/logo";
 import classes from "./navbar.module.css";
+import { useAuthContext } from "@/context/AuthContext";
 
-type NavbarProps = {
-	isSignedIn: boolean;
-};
-
-const Navbar = (props: NavbarProps) => {
-	const { isSignedIn } = props;
-
+const Navbar = () => {
+	const user = useAuthContext();
 	const router = useRouter();
 
 	const handleSignUpClick = () => {
@@ -23,23 +19,23 @@ const Navbar = (props: NavbarProps) => {
 
 	return (
 		<>
-			{isSignedIn ? (
+			{user === null ? (
 				<div className={classes.container}>
 					<Logo />
-					<div>
-						<h3>Orders</h3>
-						<h3>Recipes</h3>
-						<h3>Schedule</h3>
-						{/* Profile Icon */}
-						<h3>P</h3>
+					<div className={classes.rightActions}>
+						<Button caption="Sign up" onClick={handleSignUpClick} />
+						<Button caption="Log in" onClick={handleLogInClick} />
 					</div>
 				</div>
 			) : (
 				<div className={classes.container}>
 					<Logo />
-					<div className={classes.buttons}>
-						<Button caption="Sign up" onClick={handleSignUpClick} />
-						<Button caption="Log in" onClick={handleLogInClick} />
+					<div className={classes.rightActions}>
+						<h3>Orders</h3>
+						<h3>Recipes</h3>
+						<h3>Schedule</h3>
+						{/* Profile Icon */}
+						<h3>P</h3>
 					</div>
 				</div>
 			)}

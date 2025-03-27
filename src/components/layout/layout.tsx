@@ -6,7 +6,7 @@ import Footer from "./footer/footer";
 const Layout = ({ children }: { children: ReactNode }) => {
 	return (
 		<>
-			<Navbar isSignedIn={false} />
+			<Navbar />
 			<div>{children}</div>
 			<Footer />
 		</>

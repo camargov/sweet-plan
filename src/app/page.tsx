@@ -1,5 +1,5 @@
-import HomeDisplay from "@/components/home/home";
+import SweetPlanHome from "@/components/home/home";
 
 export default function Home() {
-	return <HomeDisplay />;
+	return <SweetPlanHome />;
 }
