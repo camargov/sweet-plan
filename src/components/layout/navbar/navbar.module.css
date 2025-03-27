@@ -1,0 +1,11 @@
+.container {
+	display: flex;
+	align-items: center;
+	padding: 24px;
+}
+
+.buttons {
+	margin-left: auto;
+	display: flex;
+	gap: 24px;
+}

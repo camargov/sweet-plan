@@ -1,0 +1,26 @@
+.hero {
+	background-color: gainsboro;
+	padding: 128px 480px 400px 128px;
+}
+
+.banner {
+	padding: 80px;
+	text-align: center;
+}
+
+.toolContainer {
+	display: flex;
+	margin: auto;
+	width: 720px;
+	gap: 48px;
+	padding-top: 48px;
+}
+
+.toolText {
+	padding-top: 48px;
+}
+
+.reviewContainer {
+	padding: 128px;
+	text-align: center;
+}
