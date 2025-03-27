@@ -4,6 +4,7 @@ import Button from "../../button/button";
 import Logo from "../../logo/logo";
 import classes from "./navbar.module.css";
 import { useAuthContext } from "@/context/AuthContext";
+import { signOut } from "@/firebase/auth/auth";
 
 const Navbar = () => {
 	const user = useAuthContext();
@@ -15,6 +16,11 @@ const Navbar = () => {
 
 	const handleLogInClick = () => {
 		router.push("/logIn");
+	};
+
+	const handleSignOutClick = async () => {
+		await signOut();
+		router.push("/");
 	};
 
 	return (
@@ -35,7 +41,7 @@ const Navbar = () => {
 						<h3>Recipes</h3>
 						<h3>Schedule</h3>
 						{/* Profile Icon */}
-						<h3>P</h3>
+						<Button caption="Sign out" onClick={handleSignOutClick} />
 					</div>
 				</div>
 			)}

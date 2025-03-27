@@ -30,3 +30,11 @@ export async function logIn(email: string, password: string) {
 
 	return { result, error };
 }
+
+export async function signOut() {
+	try {
+		return auth.signOut();
+	} catch (error) {
+		console.error("Error signing out with Google", error);
+	}
+}
