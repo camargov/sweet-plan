@@ -1,0 +1,12 @@
+.container {
+	margin: auto;
+	width: 500px;
+}
+
+.container h1 {
+	text-align: center;
+}
+
+.secondAction {
+	margin-top: 32px;
+}

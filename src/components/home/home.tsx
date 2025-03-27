@@ -3,31 +3,9 @@ import ReviewCarousel from "./reviewCarousel/ReviewCarousel";
 import classes from "./home.module.css";
 import Image from "next/image";
 
-// import { logInUsingGoogle } from "@/firebase/auth/googleAuth";
-// import { useRouter } from "next/navigation";
-
 const HomeDisplay = () => {
-	// const router = useRouter();
-
-	// const handleLogInClick = () => {
-	// 	router.push("/logIn");
-	// };
-
-	// const handleLogInWithGoogleClick = async () => {
-	// 	const result = await logInUsingGoogle();
-	// 	console.log(result);
-	// 	router.push("/dashboard");
-	// };
-
-	// const handleSignUpClick = () => {
-	// 	router.push("/signUp");
-	// };
-
 	return (
 		<div>
-			{/* <button onClick={handleLogInClick}>Log in</button>
-			<button onClick={handleSignUpClick}>Sign up</button>
-			<button onClick={handleLogInWithGoogleClick}>Log in using Google</button> */}
 			<div className={classes.hero}>
 				<h1>
 					{"For your sweet treats, you'll need a"}
