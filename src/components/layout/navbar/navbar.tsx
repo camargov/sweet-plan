@@ -23,6 +23,18 @@ const Navbar = () => {
 		router.push("/");
 	};
 
+	const handleOrdersClick = () => {
+		router.push("/orders");
+	};
+
+	const handleRecipesClick = () => {
+		router.push("/recipes");
+	};
+
+	const handleScheduleClick = () => {
+		router.push("/schedule");
+	};
+
 	return (
 		<>
 			{user === null ? (
@@ -37,9 +49,15 @@ const Navbar = () => {
 				<div className={classes.container}>
 					<Logo />
 					<div className={classes.rightActions}>
-						<h3>Orders</h3>
-						<h3>Recipes</h3>
-						<h3>Schedule</h3>
+						<h3 onClick={handleOrdersClick} className={classes.pageLink}>
+							Orders
+						</h3>
+						<h3 onClick={handleRecipesClick} className={classes.pageLink}>
+							Recipes
+						</h3>
+						<h3 onClick={handleScheduleClick} className={classes.pageLink}>
+							Schedule
+						</h3>
 						{/* Profile Icon */}
 						<Button caption="Sign out" onClick={handleSignOutClick} />
 					</div>

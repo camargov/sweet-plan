@@ -1,0 +1,12 @@
+.content {
+	margin-top: 32px;
+}
+
+.topContainer {
+	display: flex;
+	gap: 32px;
+}
+
+.bottomContainer {
+	margin-top: 32px;
+}
