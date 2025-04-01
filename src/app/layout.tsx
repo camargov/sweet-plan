@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { AuthContextProvider } from "@/context/AuthContext";
 import Layout from "@/components/layout/layout";
+import { GlobalContextProvider } from "@/context/GlobalContext";
 
 export const metadata: Metadata = {
 	title: "Sweet Plan",
@@ -16,9 +17,11 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<AuthContextProvider>
-					<Layout>{children}</Layout>
-				</AuthContextProvider>
+				<GlobalContextProvider>
+					<AuthContextProvider>
+						<Layout>{children}</Layout>
+					</AuthContextProvider>
+				</GlobalContextProvider>
 			</body>
 		</html>
 	);

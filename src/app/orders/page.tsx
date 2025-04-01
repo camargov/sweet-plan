@@ -2,18 +2,22 @@
 import Button from "@/components/button/button";
 import PageError from "@/components/pageError/pageError";
 import { useAuthContext } from "@/context/AuthContext";
+import { useGlobalContext } from "@/context/GlobalContext";
 import { useEffect, useState } from "react";
 
 const Page = () => {
 	const [orders, setOrders] = useState([]);
 
 	const user = useAuthContext();
+	const { updateGlobalState } = useGlobalContext();
 
 	useEffect(() => {
 		setOrders([]);
 	}, []);
 
-	const handleAddOrderClick = () => {};
+	const handleAddOrderClick = () => {
+		updateGlobalState({ modalOpen: true });
+	};
 
 	return (
 		<>
