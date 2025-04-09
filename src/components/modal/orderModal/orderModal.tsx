@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/button/button";
 import classes from "./orderModal.module.css";
+import { useAuthContext } from "@/context/AuthContext";
 
 type OrderModalProps = {
 	onClose: () => void;
@@ -9,7 +10,13 @@ type OrderModalProps = {
 const OrderModal = (props: OrderModalProps) => {
 	const { onClose } = props;
 
-	const handleAddClick = () => {};
+	const user = useAuthContext();
+
+	const handleAddClick = () => {
+		// "1AigfxiPt1VTnyR5IUlMZfzMOFq1"
+		// uid: "1AigfxiPt1VTnyR5IUlMZfzMOFq1"
+		console.log(user?.uid);
+	};
 
 	return (
 		<div className={classes.container}>

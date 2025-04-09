@@ -9,6 +9,18 @@
 			"type": "node-terminal",
 			"request": "launch",
 			"command": "npm run dev"
+		},
+		{
+			"name": "Prisma Studio",
+			"type": "node-terminal",
+			"request": "launch",
+			"command": "npx prisma studio"
+		}
+	],
+	"compounds": [
+		{
+			"name": "Client + Prisma Studio",
+			"configurations": ["Sweet Plan Client", "Prisma Studio"]
 		}
 	]
 }
